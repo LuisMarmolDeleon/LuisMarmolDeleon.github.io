@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+html {
+    height:100%;
+    overflow:hidden;
+}
+/*Header*/
+body {
+    color: black;
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background:#333;
+    text-align: center;
+}
+.intro {
+    box-sizing: border-box;
+    min-height: 100vh;
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    padding: 30vw 0 5vw;
+    position: relative;
+    transform-style: inherit;
+    width: 100vw;
+}
+
+#texto{
+    font-family: 'Lobster', cursive;
+    font-size: 1.8em;
+}
+#despedida{
+    font-family: 'Lobster', cursive;
+    font-size: 3.8em;
+    color: lightpink;
+}
+.intro h1 {
+    margin-top: -100px;
+}
+.intro, .intro:before {
+    background: 50% 50% / cover;
+}
+
+.intro:before {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    display: block;
+    background-image: url("/media/img/header.png");
+    background-size: cover;
+    transform-origin: center center 0;
+    transform:  translateZ(-1px) scale(2);
+    z-index: -1;
+    height: 100vh
+}
+/*Fin header*/
+
+/*Segundo bloque*/
+.segundo_bloque {
+    box-sizing: border-box;
+    min-height: 100vh;
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    padding: 30vw 0 5vw;
+    position: relative;
+    transform-style: inherit;
+    width: 100vw;
+}
+#parrafazo{
+    font-family:"Montserrat", sans-serif;
+    font-size: 0.5em;
+    width: 40%;
+    height: 60%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    word-spacing: 0.15em;
+    line-height: 1.5em;
+}
+.segundo_bloque h1 {
+    margin-top: -100px;
+}
+.segundo_bloque, .segundo_bloque:before {
+    background: 50% 50% / cover;
+}
+
+.segundo_bloque:before {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    display: block;
+    background-image: url("/media/img/segundoBloque.png");
+    background-size: cover;
+    transform-origin: center center 0;
+    transform:  translateZ(-1px) scale(2);
+    z-index: -1;
+    height: 100vh
+}
+.segundo_bloque h1{
+    position: absolute;left: 55%;top: 20%
+}
+/*Fin Segundo bloque*/
+.content {
+    margin:200px auto;
+    width:100%;
+    position: relative;
+    z-index: 1;
+    background:white;
+    padding:100px 0
+}
+.container {
+    max-width:800px;
+    margin:0 auto
+}
+/*Responsive*/
+@media (max-width: 480px) {
+    .intro {
+        height: 450vw;
+    }
+    .intro:before {
+        background-image: url("/media/img/headercell.png");
+        background-size: cover;
+        height: 100vh;
+    }
+    .segundo_bloque{
+        height: 750vw;
+    }
+    .segundo_bloque:before {
+        background-image: url("/media/img/segundoBloquecell.png");
+        background-size: cover;
+        height: 100vh;
+    }
+    .segundo_bloque h1{
+        position: absolute;
+        left: 10%;
+        display: flex;
+        top: 30px;
+    }
+    #parrafazo{
+        font-family:"Montserrat", sans-serif;
+        font-size: 0.5em;
+        width: 80%;
+        height: 60%;
+        position: absolute;
+        top: 3%;
+        left: 5%;
+        word-spacing: 0.15em;
+        line-height: 1.5em;
+        text-decoration-thickness: 10px;
+        content: "Ah hermana, eso lo veras en la PC XDDD";
+    }
+}
